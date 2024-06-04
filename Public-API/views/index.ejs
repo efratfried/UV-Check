@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UV Index Checker</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <label class="header-label"
+        >Insert your current position latitude & longtitude
+      </label>
+
+      <form id="myForm" method="post" style="margin-top:20px">
+        <label for="LATITUDE">LATITUDE:</label>
+        <input type="text" id="LATITUDEInput" name="LATITUDE" />
+
+        <label for="LONGITUDE">LONGITUDE:</label>
+        <input type="text" id="LONGITUDE" name="LONGITUDE" />
+        <input id="get" type="submit" value="check" formaction="/check">
+
+      </form>
+      <h1>UV Index Checker</h1>
+      <p id="uv-index">Fetching UV index...</p>
+      <b id="advice"><%= locals.advice %></b>
+    </div>
+  </body>
+</html>
